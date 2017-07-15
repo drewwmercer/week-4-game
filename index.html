@@ -68,7 +68,7 @@
                         <h3 class="panel-title text-center">Total score this round</h3>
                     </div>
 
-                    <div class="panel-body">
+                    <div id="current-score" class="panel-body">
 
                     </div>
                 </div>
@@ -91,16 +91,6 @@
 
 
 
-
-
-
-
-            var secondNumber = "";
-            var operator = "";
-            var result = 0;
-            var hasNumber = false;
-            var firstNumberComplete = false;
-            var lockButtons = false;
 
             // Check if any button is clicked...
             $(document).on("click", "button", function () {
