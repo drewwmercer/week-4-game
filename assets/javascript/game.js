@@ -11,8 +11,8 @@ var updateCurrentCount = function() {
   $("#current-count").empty();
   $("#current-count").append(currentCount);
 
-  $("#win-count").empty();
-  $("#win-count").append(winCounter);
+  $(".win-count").empty();
+  $(".win-count").text("Wins: " + winCounter);
 
   $("#loss-count").empty();
   $("#loss-count").append(lossCounter);
@@ -50,22 +50,22 @@ $("#random-number").append(randomNumber);
 $("#current-count").append(currentCount);
 
 $(document).ready(function() {
-  $(".blue-gem").click(function() {
+  $("#blue-gem").on("click", function() {
     currentCount = currentCount + crystalOneValue;
     gamePlay();
   });
 
-  $(".green-gem").click(function() {
+  $("#green-gem").on("click", function() {
     currentCount = currentCount + crystalTwoValue;
     gamePlay();
   });
 
-  $(".orange-gem").click(function() {
+  $("#orange-gem").on("click", function() {
     currentCount = currentCount + crystalThreeValue;
     gamePlay();
   });
 
-  $(".purple-gem").click(function() {
+  $("#purple-gem").on("click", function() {
     currentCount = currentCount + crystalFourValue;
     gamePlay();
   });
