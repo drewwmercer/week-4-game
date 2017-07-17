@@ -11,7 +11,7 @@ var currentCount = 0;
 $(document).ready(function() {
   $("#win-count").html("Wins: " + winCounter)
   $("#loss-count").html("Losses: " + lossCounter)
-  $
+  $("#current-count").html(currentCount);
   
   $("#random-button").on("click", function() {
     var randomNumber = Math.floor(Math.random() * (120 - 19) + 19);
@@ -26,9 +26,55 @@ $(document).ready(function() {
     console.log("two: " + crystalTwoValue);
     console.log("three: " + crystalThreeValue);
     console.log("four: " + crystalFourValue);
-  });
+  
+    $(".blue-gem").on("click", function() {
+        $("#current-count").text(currentCount + crystalOneValue)
+    });
 
-  $(".blue-gem").on("click", function() {
-    $("#current-count").html(currentCount + crystalOneValue)
+
+  
+
+
+
+
+
+var gamePlay = function (){
+ 		if (currentCount == randomNumber) {
+ 			winCounter = winCounter + 1;
+ 			alert("You win!");
+ 			restart();
+ 		} else if (currentCount > randomNumber) {
+ 			lossCounter = lossCounter + 1;
+ 			alert("You lost");
+ 			restart();
+ 		} else {
+ 			updateCurrentCount();
+ 		}
+ 	}
+
+ 	$("#random-number").append(randomNumber);
+ 	$("#current-count").append(currentCount);
+
+   	$(document).ready(function() {
+ 		$(".blue-gem").click(function(){
+ 			currentCount = currentCount + crystalOneValue;
+ 			game();
+ 		})
+
+ 		$(".green-gem").click(function(){
+ 			currentCount = currentCount + crystalTwoValue;
+ 			game();
+ 		})
+
+ 		$(".orange-gem").click(function(){
+ 			currentCount = currentCount + crystalThreeValue;
+ 			game();
+ 		})
+
+ 		$(".purple-gem").click(function(){
+ 			currentCount = addition + crystalFourValue;
+ 			game();
+         })
+});
   });
 });
