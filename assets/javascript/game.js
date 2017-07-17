@@ -11,11 +11,11 @@ var updateCurrentCount = function() {
   $("#current-count").empty();
   $("#current-count").append(currentCount);
 
-  $(".win-count").empty();
-  $(".win-count").text("Wins: " + winCounter);
+  $("#win-count").empty();
+  $("#win-count").text("Wins: " + winCounter);
 
   $("#loss-count").empty();
-  $("#loss-count").append(lossCounter);
+  $("#loss-count").append("Losses: " + lossCounter);
 };
 // Crystal Collector
 var restartGame = function() {
@@ -71,15 +71,8 @@ $(document).ready(function() {
   });
 });
 
-// });
-
-// $(document).ready(function() {
-//   $("#win-count").html("Wins: " + winCounter)
-//   $("#loss-count").html("Losses: " + lossCounter)
-//   $("#current-count").html(currentCount);
-
-    console.log("random: " + randomNumber);
-    console.log("one: " + crystalOneValue);
-    console.log("two: " + crystalTwoValue);
-    console.log("three: " + crystalThreeValue);
-    console.log("four: " + crystalFourValue);
+console.log("random: " + randomNumber);
+console.log("one: " + crystalOneValue);
+console.log("two: " + crystalTwoValue);
+console.log("three: " + crystalThreeValue);
+console.log("four: " + crystalFourValue);
