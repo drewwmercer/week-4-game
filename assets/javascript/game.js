@@ -12,7 +12,7 @@ var updateCurrentCount = function() {
   $("#current-count").append(currentCount);
 
   $("#win-count").empty();
-  $("#win-count").text("Wins: " + winCounter);
+  $("#win-count").append("Wins: " + winCounter);
 
   $("#loss-count").empty();
   $("#loss-count").append("Losses: " + lossCounter);
