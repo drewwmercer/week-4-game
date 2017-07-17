@@ -44,7 +44,7 @@
             </div>
 
             <!-- Result Panel -->
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">Select Your Crystals</h3>
@@ -62,7 +62,7 @@
         <div class="row">
 
             <!-- Counter Panel -->
-            <div class="col-lg-4">
+            <div class="col-lg-5 col-lg-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">Total count this round</h3>
@@ -73,23 +73,23 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
 
         <!--<div class="row">-->
 
             <!-- Score Panel -->
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">Results</h3>
                     </div>
-                    <div id="latest-result" class="panel-body">
-                    <div id="win-count" class="panel-body">
-                    <div id="loss-count" class="panel-body">
+                    <div id="latest-result" class="panel-body"></div>
+                    <div id="win-count" class="panel-body"></div>
+                    <div id="loss-count" class="panel-body"></div>
                     </div>
                 </div>
             </div>
-        <!--</div>-->
+        </div>
 
 
     </div>
@@ -106,6 +106,20 @@
             var winCounter;
             var lossCounter;
             var currentTally;
+
+
+
+ $("#random-button").on("click", function() {
+
+        var randomNumber = "";
+
+        $("#random-button").on("click", function () {
+        var newNum = (Math.floor(Math.random() * (999999999 - 100000000) + 100000000));
+        $("#random-number").prepend(newNum, "<br>", numbers)
+      });
+
+
+
 
 
 
