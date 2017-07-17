@@ -39,7 +39,7 @@ var gamePlay = function() {
     restartGame();
   } else if (currentCount > randomNumber) {
     lossCounter = lossCounter + 1;
-    alert("You lost");
+    alert("You lost this time. Try again!");
     restartGame();
   } else {
     updateCurrentCount();
